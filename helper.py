@@ -9,4 +9,5 @@ def fetch_value(value_id: str):
 def fetch_first_value():
     wrapper = ConnectionWrapper()
     wrapper.cleanup(True)
+    wrapper.cleanup()
     return wrapper.get_single(1)
