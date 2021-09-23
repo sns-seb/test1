@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/<value_id>', methods=['GET', 'POST'])
+@app.route('/<value_id>', methods=['GET'])
 def show_value(value_id: str):
     value_obj = helper.fetch_value(value_id)
     if value_obj is None:
