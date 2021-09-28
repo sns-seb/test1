@@ -7,6 +7,6 @@ def fetch_value(value_id: str):
     return value_obj
 
 def fetch_first_value():
-    wrapper = ConnectionWrapper(False)
+    wrapper = ConnectionWrapper()
     wrapper.cleanup(True)
     return wrapper.get_single(1)
